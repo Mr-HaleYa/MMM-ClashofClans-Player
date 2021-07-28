@@ -27,7 +27,6 @@ module.exports = NodeHelper.create({
             } else {
                 result = null
             }
-            console.log("Name: " + result.name)
             this.sendSocketNotification('GOT-PLAYER-STATS', result)
         })
     },
