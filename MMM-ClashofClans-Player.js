@@ -29,9 +29,7 @@ Module.register("MMM-ClashofClans-Player", {
         if(this.loaded){
 
             let wrapper = document.createElement("div");
-            let span = document.createElement("span")
-            span.appendChild(document.createTextNode(this.playerName))
-            wrapper.appendChild(span)
+            wrapper.innerHTML = this.playerName;
             /*let wrapper = document.createElement("div");
             wrapper.classList.add("container")
 
