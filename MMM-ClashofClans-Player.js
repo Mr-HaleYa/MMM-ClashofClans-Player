@@ -1,6 +1,6 @@
 Module.register("MMM-ClashofClans-Player", {
     defaults: {
-        updateInterval: 15 * 60 * 1000, //Alle 15 Minuten
+        updateInterval: 20 * 1000, //Alle 15 Minuten
         playerTag: "YQLQ902Y", //Without the Hashtag
     },
 
