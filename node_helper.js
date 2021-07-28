@@ -27,7 +27,7 @@ module.exports = NodeHelper.create({
             } else {
                 result = null
             }
-            console.log("Hab bis hier her geklappt und nun geht es zurück")
+            console.log("Name: " + result.name)
             this.sendSocketNotification('GOT-PLAYER-STATS', result)
         })
     },
