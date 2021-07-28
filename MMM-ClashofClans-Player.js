@@ -17,25 +17,26 @@ Module.register("MMM-ClashofClans-Player", {
         this.sheduleUpdate()
     },
 
+    getStyles: function () {
+        return ['MMM-ClashofClans-Player.css'];
+    },
+
     getPlayerStats: function() {
         this.sendSocketNotification('GET-PLAYER-STATS', this.playerTag);
     },
 
     getDom: function () {
         if(this.loaded){
-            var wrapper = document.createElement("div");
-            wrapper.innerHTML = "Hello World";
-            return wrapper;
 
-            /*let wrapper = document.createElement("div");
-            //wrapper.classList.add("container")
+            let wrapper = document.createElement("div");
+            wrapper.classList.add("container")
 
             let name_container = document.createElement("div")
             let span = document.createElement("span")
             span.appendChild(document.createTextNode("huhu"))
             name_container.appendChild(span)
-            //name_container.classList.add("container")
-            wrapper.appendChild(name_container)*/
+            name_container.classList.add("container")
+            wrapper.appendChild(name_container)
 
             /*let stats_container = document.createElement("div")
             stats_container.classList.add("container")
