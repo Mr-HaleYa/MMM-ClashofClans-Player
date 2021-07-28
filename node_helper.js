@@ -10,18 +10,22 @@ module.exports = NodeHelper.create({
     },
 
     getPlayerStats: function(payload) {
-        var that = this
+        //var that = this
         this.url = 'https://api.clashofclans.com/v1/players/%23' + payload
 
-        request({url: this.url, method: 'GET'}, function(error, response, body) {
-            var result = JSON.parse(body)
+        request({
+            url: this.url,
+            method: 'GET'
+        }, (error, response, body) => {
+
             if(!error && response.statusCode == 200){
-                that.PlayerName = result[0].name
-                that.trophies = result[0].trophies
+                var result = JSON.parse(body)
+                this.PlayerName = result.name
+                this.trophies = result.trophies
             } else {
-                that.playerName = 'Error'
+                this.playerName = 'Error'
             }
-            that.sendSocketNotification('GOT-PLAYER-STATS', {'name': that.playerName, 'trophies': that.trophies})
+            this.sendSocketNotification('GOT-PLAYER-STATS', {'name': this.playerName, 'trophies': this.trophies})
         })
     },
 
