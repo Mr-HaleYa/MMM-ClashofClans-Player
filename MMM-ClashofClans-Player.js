@@ -90,6 +90,7 @@ Module.register("MMM-ClashofClans-Player", {
     },
 
     socketNotificationReceived: function(notification, payload) {
+        console.log("Hier kommt was an :)")
         switch (notification) {
             case 'GOT-PLAYER-STATS' && payload != null:
                 console.log("Hier kommt was an");
