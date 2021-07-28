@@ -29,6 +29,10 @@ Module.register("MMM-ClashofClans-Player", {
         if(this.loaded){
 
             let wrapper = document.createElement("div");
+            let span = document.createElement("span")
+            span.appendChild(document.createTextNode(this.playerName))
+            wrapper.appendChild(span)
+            /*let wrapper = document.createElement("div");
             wrapper.classList.add("container")
 
             let name_container = document.createElement("div")
@@ -36,7 +40,7 @@ Module.register("MMM-ClashofClans-Player", {
             span.appendChild(document.createTextNode("huhu"))
             name_container.appendChild(span)
             name_container.classList.add("container")
-            wrapper.appendChild(name_container)
+            wrapper.appendChild(name_container)*/
 
             /*let stats_container = document.createElement("div")
             stats_container.classList.add("container")
