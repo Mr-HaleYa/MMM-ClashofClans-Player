@@ -34,7 +34,7 @@ module.exports = NodeHelper.create({
                 Authorization: 'Bearer ' + this.token
             }
         }, (error, response, body) => {
-
+            console.log(response)
             if(!error && response.statusCode == 200){
                 var result = JSON.parse(body)
                 this.PlayerName = result
