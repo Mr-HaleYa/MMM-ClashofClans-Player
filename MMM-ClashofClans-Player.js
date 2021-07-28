@@ -5,7 +5,7 @@ Module.register("MMM-ClashofClans-Player", {
     },
 
     getStyles: function() {
-        return "MMM-ClashofClans-Player.css"
+        return ["MMM-ClashofClans-Player.css"]
     },
 
     start: function () {
