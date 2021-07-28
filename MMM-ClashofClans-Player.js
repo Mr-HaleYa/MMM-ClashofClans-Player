@@ -4,10 +4,6 @@ Module.register("MMM-ClashofClans-Player", {
         playerTag: "YQLQ902Y", //Without the Hashtag
     },
 
-    getStyles: function() {
-        return ["MMM-ClashofClans-Player.css"]
-    },
-
     start: function () {
         Log.info(`Starting Module: ${this.name}`);
 
@@ -86,7 +82,7 @@ Module.register("MMM-ClashofClans-Player", {
             stats_container.appendChild(clan)
             wrapper.appendChild(stats_container)*/
         } else {
-            let wrapper = document.createElement("div");
+            var wrapper = document.createElement("div");
             wrapper.innerHTML = 'Daten werden geladen...' + this.counter
             this.counter = this.counter + 1
         }
