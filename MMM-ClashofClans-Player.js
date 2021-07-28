@@ -30,7 +30,7 @@ Module.register("MMM-ClashofClans-Player", {
         if(this.loaded){
             console.log("Name: " + this.playerName)
             let wrapper = document.createElement("div");
-            wrapper.innerHTML = this.playerName;
+            wrapper.innerHTML = "Hello WOrld";
             /*let wrapper = document.createElement("div");
             wrapper.classList.add("container")
 
@@ -96,7 +96,6 @@ Module.register("MMM-ClashofClans-Player", {
     socketNotificationReceived: function(notification, payload) {
         switch (notification) {
             case 'GOT-PLAYER-STATS':
-                console.log("Ist jetzt wieder in der richtigen JS")
                 this.playerName = payload.name
                 this.trophies = payload.trophies
                 this.loaded = true
