@@ -92,7 +92,7 @@ Module.register("MMM-ClashofClans-Player", {
     socketNotificationReceived: function(notification, payload) {
         switch (notification) {
             case 'GOT-PLAYER-STATS' && payload != null:
-                console.log(payload)
+                console.log("Hier kommt was an");
                 this.playerName = payload.name
                 this.trophies = payload.trophies
                 this.loaded = true
@@ -109,7 +109,7 @@ Module.register("MMM-ClashofClans-Player", {
     sheduleUpdate: function() {
         setInterval(() => {
             this.getPlayerStats()
-        }, this.config.updateInterval)
+        }, 60*15*1000)
         this.getPlayerStats()
     }
 })

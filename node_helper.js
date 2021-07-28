@@ -21,13 +21,11 @@ module.exports = NodeHelper.create({
                 "Authorization": `Bearer ${this.token}`
             }
         }, (error, response, body) => {
-            var result
+            var result = null;
             if(!error && response.statusCode == 200){
                 result = JSON.parse(body)
-                console.log(result)
             } else {
                 result = null
-                console.log(response.statusCode)
             }
             this.sendSocketNotification('GOT-PLAYER-STATS', result)
         })
