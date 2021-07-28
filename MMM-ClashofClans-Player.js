@@ -23,7 +23,7 @@ Module.register("MMM-ClashofClans-Player", {
         if(this.loaded){
             var wrapper = document.createElement("div");
             var compliment = document.createElement("span");
-            compliment.appendChild(document.createTextNode(this.config.playerTag));
+            compliment.appendChild(document.createTextNode(this.config.playerName));
             wrapper.appendChild(compliment);
         } else {
             var wrapper = document.createElement("div");
