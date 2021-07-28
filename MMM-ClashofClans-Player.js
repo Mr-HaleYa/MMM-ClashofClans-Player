@@ -12,12 +12,11 @@ Module.register("MMM-ClashofClans-Player", {
         this.loaded = false
         this.counter = 0
 
-        this.getPlayerStats(this)
+        this.sheduleUpdate()
     },
 
-    getPlayerStats: function(that) {
-        that.sendSocketNotification('GET-PLAYER-STATS', that.playerTag);
-        setTimeout(that.getPlayerStats, that.config.updateInterval, that)
+    getPlayerStats: function() {
+        this.sendSocketNotification('GET-PLAYER-STATS', this.playerTag);
     },
 
     getDom: function () {
@@ -29,7 +28,7 @@ Module.register("MMM-ClashofClans-Player", {
         } else {
             var wrapper = document.createElement("div");
             wrapper.innerHTML = 'Daten werden geladen...' + this.counter
-            this.counter++
+            this.counter = this.counter + 1
         }
 
 
@@ -46,7 +45,14 @@ Module.register("MMM-ClashofClans-Player", {
                 this.updateDom()
                 break
             default:
+                this.updateDom()
                 break
         }
+    },
+    sheduleUpdate: function() {
+        setInterval(() => {
+            this.getPlayerStats()
+        }, this.config.updateInterval)
+        this.getPlayerStats()
     }
 })
