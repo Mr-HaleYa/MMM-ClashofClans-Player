@@ -28,7 +28,7 @@ Module.register("MMM-ClashofClans-Player", {
     getDom: function () {
         if(this.loaded){
             let wrapper = document.createElement("div");
-            wrapper.classList.add("container")
+            //wrapper.classList.add("container")
 
             let name_container = document.createElement("div")
             name_container.appendChild(
