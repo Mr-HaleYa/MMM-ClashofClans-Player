@@ -35,16 +35,17 @@ module.exports = NodeHelper.create({
                 "Authorization": `Bearer ${this.token}`
             }
         }, (error, response, body) => {
+            var PlayerName
+            var trophies
             if(!error && response.statusCode == 200){
                 var result = JSON.parse(body)
-                console.log(result)
-                this.PlayerName = result
-                this.trophies = result.trophies
+                PlayerName = result.name
+                trophies = result.trophies
+                console.log(PlayerName)
             } else {
-                console.log(response.statusCode)
-                this.PlayerName = 'Error'
+                PlayerName = 'Error'
             }
-            this.sendSocketNotification('GOT-PLAYER-STATS', {'name': this.PlayerName, 'trophies': this.trophies})
+            this.sendSocketNotification('GOT-PLAYER-STATS', {'name': PlayerName, 'trophies': trophies})
         })
     },
 
