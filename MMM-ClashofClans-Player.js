@@ -10,6 +10,7 @@ Module.register("MMM-ClashofClans-Player", {
         this.playerName = ''
         this.trophies = ''
         this.loaded = false
+        this.counter = 0
 
         this.getPlayerStats(this)
     },
@@ -27,7 +28,8 @@ Module.register("MMM-ClashofClans-Player", {
             wrapper.appendChild(compliment);
         } else {
             var wrapper = document.createElement("div");
-            wrapper.innerHTML = 'Daten werden geladen...'
+            wrapper.innerHTML = 'Daten werden geladen...' + this.counter
+            this.counter++
         }
 
 
@@ -36,7 +38,7 @@ Module.register("MMM-ClashofClans-Player", {
 
     socketNotificationReceived: function(notification, payload) {
         switch (notification) {
-            case 'GOT-PLAYER-STATS' && payload.name != 'Error':
+            case 'GOT-PLAYER-STATS':
                 this.getPlayerStats(payload)
                 this.playerName = payload.name
                 this.trophies = payload.trophies
