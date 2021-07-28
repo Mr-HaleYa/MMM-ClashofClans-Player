@@ -34,7 +34,7 @@ Module.register("MMM-ClashofClans-Player", {
             name_container.appendChild(
                 document.createElement("span")
                     .appendChild(
-                        document.createTextNode(this.playerName)
+                        document.createTextNode("Huhu")
                     )
             )
             //name_container.classList.add("container")
