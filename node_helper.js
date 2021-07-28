@@ -41,6 +41,7 @@ module.exports = NodeHelper.create({
                 this.PlayerName = result
                 this.trophies = result.trophies
             } else {
+                console.log(response.statusCode)
                 this.PlayerName = 'Error'
             }
             this.sendSocketNotification('GOT-PLAYER-STATS', {'name': this.PlayerName, 'trophies': this.trophies})
