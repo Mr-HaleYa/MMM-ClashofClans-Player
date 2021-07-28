@@ -21,30 +21,30 @@ module.exports = NodeHelper.create({
             }
         }
 
-        fetch(this.url, this.object)
+        /*fetch(this.url, this.object)
             .then(function (res) {
                 console.log(res.json())
                 this.sendSocketNotification('GOT-PLAYER-STATS', res.json())
 
-            })
+            })*/
 
-        /*request({
+        request({
             url: this.url,
             method: 'GET',
             headers: {
-                Authorization: 'Bearer ' + this.token
+                "Authorization": `Bearer ${this.token}`
             }
         }, (error, response, body) => {
-            console.log(response)
             if(!error && response.statusCode == 200){
                 var result = JSON.parse(body)
+                console.log(result)
                 this.PlayerName = result
                 this.trophies = result.trophies
             } else {
                 this.PlayerName = 'Error'
             }
             this.sendSocketNotification('GOT-PLAYER-STATS', {'name': this.PlayerName, 'trophies': this.trophies})
-        })*/
+        })
     },
 
     socketNotificationReceived: function(notification, payload) {
