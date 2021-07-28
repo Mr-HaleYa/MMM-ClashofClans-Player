@@ -29,6 +29,7 @@ Module.register("MMM-ClashofClans-Player", {
         if(this.loaded){
             let wrapper = document.createElement("div");
             wrapper.classList.add("container")
+
             let name_container = document.createElement("div")
             name_container.appendChild(
                 document.createElement("span")
@@ -39,7 +40,7 @@ Module.register("MMM-ClashofClans-Player", {
             name_container.classList.add("container")
             wrapper.appendChild(name_container)
 
-            let stats_container = document.createElement("div")
+            /*let stats_container = document.createElement("div")
             stats_container.classList.add("container")
 
             let ranking = document.createElement("div")
@@ -82,7 +83,7 @@ Module.register("MMM-ClashofClans-Player", {
 
             stats_container.appendChild(ranking)
             stats_container.appendChild(clan)
-            wrapper.appendChild(stats_container)
+            wrapper.appendChild(stats_container)*/
         } else {
             let wrapper = document.createElement("div");
             wrapper.innerHTML = 'Daten werden geladen...' + this.counter
