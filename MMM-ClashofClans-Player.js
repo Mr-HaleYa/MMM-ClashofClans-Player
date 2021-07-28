@@ -51,14 +51,12 @@ Module.register("MMM-ClashofClans-Player", {
 
             var ranking_details = document.createElement("div")
             ranking_details.classList.add("header")
-            ranking_details.appendChild(
-                document.createElement("img")
-                    .src = this.ranking_src
-            )
-            ranking_details.appendChild(
-                document.createElement("span")
-                    .appendChild(document.createTextNode(this.trophies))
-            )
+            var immage = document.createElement("img")
+            immage.src = this.ranking_src
+            ranking_details.appendChild(immage)
+            var trophies_span = document.createElement("span")
+            trophies_span.appendChild(document.createTextNode(this.trophies))
+            ranking_details.appendChild(trophies_span)
             ranking.appendChild(ranking_details)
             stats_container.appendChild(ranking)
             wrapper.appendChild(stats_container)

@@ -27,7 +27,6 @@ module.exports = NodeHelper.create({
             } else {
                 result = null
             }
-            console.log("request lief " + result.clan.badgeUrls.medium)
             that.sendSocketNotification('GOT-PLAYER-STATS', result)
         })
     },
