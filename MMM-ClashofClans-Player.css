@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    border: black solid 1px;
+}
+
+.half {
+    width: 49%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
