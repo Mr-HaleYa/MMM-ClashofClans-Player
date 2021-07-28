@@ -28,13 +28,13 @@ Module.register("MMM-ClashofClans-Player", {
     getDom: function () {
         if(this.loaded){
             let wrapper = document.createElement("div");
-            wrapper.classList.add("container")
+            //wrapper.classList.add("container")
 
             let name_container = document.createElement("div")
             let span = document.createElement("span")
             span.appendChild(document.createTextNode("huhu"))
             name_container.appendChild(span)
-            name_container.classList.add("container")
+            //name_container.classList.add("container")
             wrapper.appendChild(name_container)
 
             /*let stats_container = document.createElement("div")
@@ -92,6 +92,7 @@ Module.register("MMM-ClashofClans-Player", {
     socketNotificationReceived: function(notification, payload) {
         switch (notification) {
             case 'GOT-PLAYER-STATS' && payload != null:
+                console.log(payload)
                 this.playerName = payload.name
                 this.trophies = payload.trophies
                 this.loaded = true
