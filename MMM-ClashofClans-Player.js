@@ -1,6 +1,6 @@
 Module.register("MMM-ClashofClans-Player", {
     defaults: {
-        updateInterval: 20000,
+        updateInterval: 15 * 60 * 1000, //Alle 15 Minuten
         playerTag: "YQLQ902Y", //Without the Hashtag
     },
 
@@ -22,9 +22,12 @@ Module.register("MMM-ClashofClans-Player", {
     getDom: function () {
         if(this.loaded){
             var wrapper = document.createElement("div");
-            var compliment = document.createElement("span");
-            compliment.appendChild(document.createTextNode(this.playerName));
-            wrapper.appendChild(compliment);
+            var name = document.createElement("span");
+            name.appendChild(document.createTextNode(this.playerName));
+            wrapper.appendChild(name);
+            var trophies = document.createElement("span")
+            trophies.appendChild(document.createTextNode(this.trophies))
+            wrapper.appendChild(trophies)
         } else {
             var wrapper = document.createElement("div");
             wrapper.innerHTML = 'Daten werden geladen...' + this.counter
@@ -38,8 +41,6 @@ Module.register("MMM-ClashofClans-Player", {
     socketNotificationReceived: function(notification, payload) {
         switch (notification) {
             case 'GOT-PLAYER-STATS':
-                console.log("Hier kommt der Name: ")
-                console.log(payload.name)
                 this.playerName = payload.name
                 this.trophies = payload.trophies
                 this.loaded = true
