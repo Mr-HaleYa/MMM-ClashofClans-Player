@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: black solid 1px;
+    border: white solid 1px;
 }
 
 .half {

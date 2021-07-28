@@ -39,7 +39,7 @@ Module.register("MMM-ClashofClans-Player", {
             name_container.classList.add("container")
             wrapper.appendChild(name_container)
 
-            var stats_container = document.createElement("div")
+            /*var stats_container = document.createElement("div")
             stats_container.classList.add("container")
 
             var ranking = document.createElement("div")
@@ -82,7 +82,7 @@ Module.register("MMM-ClashofClans-Player", {
 
             stats_container.appendChild(ranking)
             stats_container.appendChild(clan)
-            wrapper.appendChild(stats_container)
+            wrapper.appendChild(stats_container)*/
         } else {
             var wrapper = document.createElement("div");
             wrapper.innerHTML = 'Daten werden geladen...' + this.counter
