@@ -23,7 +23,7 @@ Module.register("MMM-ClashofClans-Player", {
         if(this.loaded){
             var wrapper = document.createElement("div");
             var compliment = document.createElement("span");
-            compliment.appendChild(document.createTextNode(this.config.playerName));
+            compliment.appendChild(document.createTextNode(this.playerName));
             wrapper.appendChild(compliment);
         } else {
             var wrapper = document.createElement("div");
@@ -38,7 +38,8 @@ Module.register("MMM-ClashofClans-Player", {
     socketNotificationReceived: function(notification, payload) {
         switch (notification) {
             case 'GOT-PLAYER-STATS':
-                this.getPlayerStats(payload)
+                console.log("Hier kommt der Name: ")
+                console.log(payload.name)
                 this.playerName = payload.name
                 this.trophies = payload.trophies
                 this.loaded = true

@@ -21,13 +21,6 @@ module.exports = NodeHelper.create({
             }
         }
 
-        /*fetch(this.url, this.object)
-            .then(function (res) {
-                console.log(res.json())
-                this.sendSocketNotification('GOT-PLAYER-STATS', res.json())
-
-            })*/
-
         request({
             url: this.url,
             method: 'GET',
@@ -41,7 +34,6 @@ module.exports = NodeHelper.create({
                 var result = JSON.parse(body)
                 PlayerName = result.name
                 trophies = result.trophies
-                console.log(PlayerName)
             } else {
                 PlayerName = 'Error'
             }
