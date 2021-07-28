@@ -28,6 +28,9 @@ Module.register("MMM-ClashofClans-Player", {
             var trophies = document.createElement("span")
             trophies.appendChild(document.createTextNode(this.trophies))
             wrapper.appendChild(trophies)
+            var test = document.createElement("span")
+            test.appendChild((document.createTextNode("Ja")))
+            wrapper.appendChild(test)
         } else {
             var wrapper = document.createElement("div");
             wrapper.innerHTML = 'Daten werden geladen...' + this.counter
