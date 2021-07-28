@@ -20,7 +20,7 @@ module.exports = NodeHelper.create({
 
             if(!error && response.statusCode == 200){
                 var result = JSON.parse(body)
-                this.PlayerName = result.name
+                this.PlayerName = result
                 this.trophies = result.trophies
             } else {
                 this.playerName = 'Error'
