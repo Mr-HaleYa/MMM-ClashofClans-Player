@@ -98,9 +98,9 @@ Module.register("MMM-ClashofClans-Player", {
                 this.playerName = payload.name
                 this.trophies = payload.trophies
                 this.loaded = true
-                this.clan_name = payload.clan.name
-                this.clan_src = payload.clan.badgeUrls.medium
-                this.ranking_src = payload.league.iconUrls.medium
+                //this.clan_name = payload.clan.name
+                //this.clan_src = payload.clan.badgeUrls.medium
+                //this.ranking_src = payload.league.iconUrls.medium
                 this.updateDom()
                 break
             default:
