@@ -110,7 +110,7 @@ Module.register("MMM-ClashofClans-Player", {
     sheduleUpdate: function() {
         setInterval(() => {
             this.getPlayerStats()
-        }, 60*15*1000)
+        }, 20*1000)
         this.getPlayerStats()
     }
 })
