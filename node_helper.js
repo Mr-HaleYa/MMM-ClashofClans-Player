@@ -21,13 +21,13 @@ module.exports = NodeHelper.create({
             }
         }
 
-        fetch(this.url, this.object)
+        /*fetch(this.url, this.object)
             .then(function (res) {
                 this.sendSocketNotification('GOT-PLAYER-STATS', res.json())
 
-            })
+            })*/
 
-        /*request({
+        request({
             url: this.url,
             method: 'GET',
             headers: {
@@ -40,10 +40,10 @@ module.exports = NodeHelper.create({
                 this.PlayerName = result
                 this.trophies = result.trophies
             } else {
-                this.playerName = 'Error'
+                this.PlayerName = 'Error'
             }
             this.sendSocketNotification('GOT-PLAYER-STATS', {'name': this.PlayerName, 'trophies': this.trophies})
-        })*/
+        })
     },
 
     socketNotificationReceived: function(notification, payload) {
