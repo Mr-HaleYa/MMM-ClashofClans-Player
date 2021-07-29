@@ -62,7 +62,7 @@ Module.register("MMM-ClashofClans-Player", {
 
             stats_container.appendChild(ranking)
 
-            /*var clan = document.createElement("div")
+            var clan = document.createElement("div")
             clan.classList.add("half")
             var clan_title = document.createElement("span")
             clan_title.classList.add("header")
@@ -72,15 +72,15 @@ Module.register("MMM-ClashofClans-Player", {
             clan_details.classList.add("header")
             var immage_clan = document.createElement("img")
             image_clan.src = this.clan_src
-            image_clan.classList.add("CoC_images")
+            image_clan.classList.add("CoC_image")
             clan_details.appendChild(immage_clan)
             var clan_span = document.createElement("span")
             clan_span.appendChild(document.createTextNode(this.clan_name))
             clan_details.appendChild(clan_span)
             clan.appendChild(clan_details)
 
-            stats_container.appendChild(ranking)
-            stats_container.appendChild(clan)*/
+            stats_container.appendChild(clan)
+
             wrapper.appendChild(stats_container)
         } else {
             var wrapper = document.createElement("div");
