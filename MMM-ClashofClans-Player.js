@@ -1,7 +1,8 @@
 Module.register("MMM-ClashofClans-Player", {
     defaults: {
-        updateInterval: 20 * 1000, //Alle 15 Minuten
-        playerTag: "YQLQ902Y", //Without the Hashtag
+        updateInterval: 60 * 60 * 1000, //Every 60 Minutes
+        playerTag: 'YQLQ902Y', //Without the Hashtag
+        playerToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjMyYjcyMWQxLTYwNzAtNGI0YS04OTg0LTM2ZGE3ZTRhMzg3ZCIsImlhdCI6MTYyNzM4NzE1OCwic3ViIjoiZGV2ZWxvcGVyLzdhY2MxMWJkLTg0ZmQtNjNjZS1iN2QyLTY0Y2NhZTc1NWIxMCIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjc5LjIwNy4xNTcuMTk0Il0sInR5cGUiOiJjbGllbnQifV19.I6AylkHJQmKiAtWUj-AmmAOruuKv0gk6J4BKk0VWjuX0fa1l7S8JWtJDJOnrt4xbKcOQn6ij0kdeKkyicdKTaw' //This is available on https://developer.clashofclans.com -> My Account
     },
 
     start: function () {
@@ -22,7 +23,7 @@ Module.register("MMM-ClashofClans-Player", {
     },
 
     getPlayerStats: function() {
-        this.sendSocketNotification('GET-PLAYER-STATS', this.playerTag);
+        this.sendSocketNotification('GET-PLAYER-STATS', {'name': this.playerTag, 'token': this.config.token});
     },
 
     getDom: function () {
@@ -76,8 +77,7 @@ Module.register("MMM-ClashofClans-Player", {
             image_clan.classList.add("CoC_image")
             clan_details.appendChild(image_clan)
             var clan_span = document.createElement("span")
-            //clan_span.appendChild(document.createTextNode(this.clan_name))
-            clan_span.appendChild(document.createTextNode("Das ist ein langer Clanname"))
+            clan_span.appendChild(document.createTextNode(this.clan_name))
             clan_details.appendChild(clan_span)
             clan.appendChild(clan_details)
 
@@ -112,7 +112,7 @@ Module.register("MMM-ClashofClans-Player", {
     sheduleUpdate: function() {
         setInterval(() => {
             this.getPlayerStats()
-        }, 20*1000)
+        }, this.config.updateInterval)
         this.getPlayerStats()
     }
 })
