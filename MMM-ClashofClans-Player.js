@@ -53,7 +53,6 @@ Module.register("MMM-ClashofClans-Player", {
             ranking_details.classList.add("header")
             var immage_rank = document.createElement("img")
             immage_rank.src = this.ranking_src
-            image_rank.classList.add("CoC_images")
             ranking_details.appendChild(immage_rank)
             var trophies_span = document.createElement("span")
             trophies_span.appendChild(document.createTextNode(this.trophies))
