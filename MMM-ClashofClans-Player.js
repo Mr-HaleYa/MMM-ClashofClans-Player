@@ -70,10 +70,10 @@ Module.register("MMM-ClashofClans-Player", {
             clan.appendChild(clan_title)
             var clan_details = document.createElement("div")
             clan_details.classList.add("header")
-            var immage_clan = document.createElement("img")
+            /*var immage_clan = document.createElement("img")
             image_clan.src = this.clan_src
             image_clan.classList.add("CoC_image")
-            clan_details.appendChild(immage_clan)
+            clan_details.appendChild(immage_clan)*/
             var clan_span = document.createElement("span")
             clan_span.appendChild(document.createTextNode(this.clan_name))
             clan_details.appendChild(clan_span)
