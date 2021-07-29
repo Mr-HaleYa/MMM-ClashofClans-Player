@@ -1,8 +1,8 @@
 Module.register("MMM-ClashofClans-Player", {
     defaults: {
         updateInterval: 60 * 60 * 1000, //Every 60 Minutes
-        playerTag: 'YQLQ902Y', //Without the Hashtag
-        playerToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjMyYjcyMWQxLTYwNzAtNGI0YS04OTg0LTM2ZGE3ZTRhMzg3ZCIsImlhdCI6MTYyNzM4NzE1OCwic3ViIjoiZGV2ZWxvcGVyLzdhY2MxMWJkLTg0ZmQtNjNjZS1iN2QyLTY0Y2NhZTc1NWIxMCIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjc5LjIwNy4xNTcuMTk0Il0sInR5cGUiOiJjbGllbnQifV19.I6AylkHJQmKiAtWUj-AmmAOruuKv0gk6J4BKk0VWjuX0fa1l7S8JWtJDJOnrt4xbKcOQn6ij0kdeKkyicdKTaw' //This is available on https://developer.clashofclans.com -> My Account
+        playerTag: '', //Without the Hashtag
+        playerToken: '' //This is available on https://developer.clashofclans.com -> My Account
     },
 
     start: function () {
