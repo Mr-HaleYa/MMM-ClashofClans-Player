@@ -34,7 +34,8 @@ Module.register("MMM-ClashofClans-Player", {
 
             var name_container = document.createElement("div")
             var span = document.createElement("span")
-            span.appendChild(document.createTextNode(this.playerName))
+            //span.appendChild(document.createTextNode(this.playerName))
+            span.appendChild(document.createTextNode("Hiermit testen wir mal, wie viel Platz solch eine möglichkeit jetzt bietet. Wird es breiter?"))
             name_container.appendChild(span)
             name_container.classList.add("container_clash", "CoC_underline")
             wrapper.appendChild(name_container)
