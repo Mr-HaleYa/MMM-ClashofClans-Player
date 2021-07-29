@@ -51,17 +51,16 @@ Module.register("MMM-ClashofClans-Player", {
 
             var ranking_details = document.createElement("div")
             ranking_details.classList.add("header")
-            var immage = document.createElement("img")
-            immage.src = this.ranking_src
-            ranking_details.appendChild(immage)
+            var immage_rank = document.createElement("img")
+            immage_rank.src = this.ranking_src
+            image_rank.classList.add("CoC_images")
+            ranking_details.appendChild(immage_rank)
             var trophies_span = document.createElement("span")
             trophies_span.appendChild(document.createTextNode(this.trophies))
             ranking_details.appendChild(trophies_span)
             ranking.appendChild(ranking_details)
-            stats_container.appendChild(ranking)
-            wrapper.appendChild(stats_container)
 
-            /*var clan = document.createElement("div")
+            var clan = document.createElement("div")
             clan.classList.add("half")
             var clan_title = document.createElement("span")
             clan_title.classList.add("header")
@@ -69,19 +68,18 @@ Module.register("MMM-ClashofClans-Player", {
             clan.appendChild(clan_title)
             var clan_details = document.createElement("div")
             clan_details.classList.add("header")
-            clan_details.appendChild(
-                document.createElement("img")
-                    .src = this.clan_src
-            )
-            clan_details.appendChild(
-                document.createElement("span")
-                    .appendChild(document.createTextNode(this.clan_name))
-            )
+            var immage_clan = document.createElement("img")
+            image_clan.src = this.clan_src
+            image_clan.classList.add("CoC_images")
+            clan_details.appendChild(immage_clan)
+            var clan_span = document.createElement("span")
+            clan_span.appendChild(document.createTextNode(this.clan_name))
+            clan_details.appendChild(clan_span)
             clan.appendChild(clan_details)
 
             stats_container.appendChild(ranking)
             stats_container.appendChild(clan)
-            wrapper.appendChild(stats_container)*/
+            wrapper.appendChild(stats_container)
         } else {
             var wrapper = document.createElement("div");
             wrapper.innerHTML = 'Daten werden geladen...' + this.counter
