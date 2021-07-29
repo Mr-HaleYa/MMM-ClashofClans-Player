@@ -36,7 +36,7 @@ Module.register("MMM-ClashofClans-Player", {
             var span = document.createElement("span")
             span.appendChild(document.createTextNode(this.playerName))
             name_container.appendChild(span)
-            name_container.classList.add("container_clash")
+            name_container.classList.add("container_clash", "CoC_underline")
             wrapper.appendChild(name_container)
 
             var stats_container = document.createElement("div")
