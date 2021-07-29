@@ -23,7 +23,7 @@ Module.register("MMM-ClashofClans-Player", {
     },
 
     getPlayerStats: function() {
-        this.sendSocketNotification('GET-PLAYER-STATS', {'name': this.playerTag, 'token': this.config.token});
+        this.sendSocketNotification('GET-PLAYER-STATS', {'name': this.config.playerTag, 'token': this.config.token});
     },
 
     getDom: function () {
