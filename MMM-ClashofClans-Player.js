@@ -71,7 +71,7 @@ Module.register("MMM-ClashofClans-Player", {
             var clan_details = document.createElement("div")
             clan_details.classList.add("header")
             var immage_clan = document.createElement("img")
-            image_clan.src = this.clan_src
+            image_clan.src = this.ranking_src
             image_clan.classList.add("CoC_image")
             clan_details.appendChild(immage_clan)
             var clan_span = document.createElement("span")
