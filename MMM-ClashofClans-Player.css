@@ -10,8 +10,8 @@
 
 .half {
     width: 38%;
-    padding-left: 5%;
-    padding-right: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .header {
@@ -22,5 +22,4 @@
 
 .CoC_image {
     width: 40px;
-    padding-left: 20px;
 }
