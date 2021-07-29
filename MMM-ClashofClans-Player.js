@@ -52,7 +52,7 @@ Module.register("MMM-ClashofClans-Player", {
             var ranking_details = document.createElement("div")
             ranking_details.classList.add("header")
             var immage_rank = document.createElement("img")
-            immage_rank.src = this.clan_src
+            immage_rank.src = this.ranking_src
             immage_rank.classList.add("CoC_image")
             ranking_details.appendChild(immage_rank)
             var trophies_span = document.createElement("span")
@@ -72,7 +72,7 @@ Module.register("MMM-ClashofClans-Player", {
             var clan_details = document.createElement("div")
             clan_details.classList.add("header")
             var image_clan = document.createElement("img")
-            image_clan.src = this.ranking_src
+            image_clan.src = this.clan_src
             image_clan.classList.add("CoC_image")
             clan_details.appendChild(image_clan)
             var clan_span = document.createElement("span")
