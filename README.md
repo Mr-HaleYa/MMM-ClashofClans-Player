@@ -4,6 +4,8 @@ This is a MagicMirror Module which shows you the Name, the actual Trophies and t
 
 ## Screenshot
 
+![Screenshot of MMM-ClashofClans-Player](/screenshots/MMM-ClashofClans-Player.png)
+
 ## Requirements
 
 - You need an active Clash of Clans Developer Account. You can register yourself one at https://developer.clashofclans.com/#/register
