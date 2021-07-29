@@ -14,7 +14,6 @@ Module.register("MMM-ClashofClans-Player", {
         this.clan_src = ''
         this.clan_name = ''
         this.loaded = false
-
         this.sheduleUpdate()
     },
 
@@ -28,20 +27,17 @@ Module.register("MMM-ClashofClans-Player", {
 
     getDom: function () {
         if(this.loaded){
-            /*var wrapper = document.createElement("div");
-            wrapper.innerHTML = this.playerName;*/
             var wrapper = document.createElement("div");
-            //wrapper.classList.add("container_clash")
 
             var name_container = document.createElement("div")
             var span = document.createElement("span")
             span.appendChild(document.createTextNode(this.playerName))
             name_container.appendChild(span)
-            name_container.classList.add("container_clash", "CoC_underline")
+            name_container.classList.add("CoC_container", "CoC_underline")
             wrapper.appendChild(name_container)
 
             var stats_container = document.createElement("div")
-            stats_container.classList.add("container_clash")
+            stats_container.classList.add("CoC_container")
 
             var ranking = document.createElement("div")
             ranking.classList.add("CoC_half")
