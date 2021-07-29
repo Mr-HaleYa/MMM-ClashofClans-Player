@@ -77,7 +77,7 @@ Module.register("MMM-ClashofClans-Player", {
             clan_details.appendChild(image_clan)
             var clan_span = document.createElement("span")
             //clan_span.appendChild(document.createTextNode(this.clan_name))
-            clan_span.appendChild(document.createTextNode("Das ist ein langer Clanname")
+            clan_span.appendChild(document.createTextNode("Das ist ein langer Clanname"))
             clan_details.appendChild(clan_span)
             clan.appendChild(clan_details)
 
