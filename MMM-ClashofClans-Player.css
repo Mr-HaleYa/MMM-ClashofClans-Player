@@ -13,6 +13,7 @@
     margin-left: 5%;
     margin-right: 5%;
     border: 1px red solid;
+    overflow: hidden;
 }
 
 .header {
