@@ -44,7 +44,7 @@ Module.register("MMM-ClashofClans-Player", {
             stats_container.classList.add("container_clash")
 
             var ranking = document.createElement("div")
-            ranking.classList.add("half")
+            ranking.classList.add("CoC_half")
             var ranking_title = document.createElement("span")
             ranking_title.classList.add("header")
             ranking_title.appendChild(document.createTextNode("Ranking"))
@@ -64,7 +64,7 @@ Module.register("MMM-ClashofClans-Player", {
             stats_container.appendChild(ranking)
 
             var clan = document.createElement("div")
-            clan.classList.add("half")
+            clan.classList.add("CoC_half")
             var clan_title = document.createElement("span")
             clan_title.classList.add("header")
             clan_title.appendChild(document.createTextNode("Clan"))
