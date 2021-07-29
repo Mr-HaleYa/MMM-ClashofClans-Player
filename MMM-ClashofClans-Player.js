@@ -34,8 +34,7 @@ Module.register("MMM-ClashofClans-Player", {
 
             var name_container = document.createElement("div")
             var span = document.createElement("span")
-            //span.appendChild(document.createTextNode(this.playerName))
-            span.appendChild(document.createTextNode("Hiermit testen wir mal, wie viel Platz solch eine möglichkeit jetzt bietet. Wird es breiter?"))
+            span.appendChild(document.createTextNode(this.playerName))
             name_container.appendChild(span)
             name_container.classList.add("container_clash", "CoC_underline")
             wrapper.appendChild(name_container)
@@ -77,7 +76,8 @@ Module.register("MMM-ClashofClans-Player", {
             image_clan.classList.add("CoC_image")
             clan_details.appendChild(image_clan)
             var clan_span = document.createElement("span")
-            clan_span.appendChild(document.createTextNode(this.clan_name))
+            //clan_span.appendChild(document.createTextNode(this.clan_name))
+            clan_span.appendChild(document.createTextNode("Das ist ein langer Clanname")
             clan_details.appendChild(clan_span)
             clan.appendChild(clan_details)
 
