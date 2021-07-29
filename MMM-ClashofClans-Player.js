@@ -60,7 +60,9 @@ Module.register("MMM-ClashofClans-Player", {
             ranking_details.appendChild(trophies_span)
             ranking.appendChild(ranking_details)
 
-            var clan = document.createElement("div")
+            stats_container.appendChild(ranking)
+
+            /*var clan = document.createElement("div")
             clan.classList.add("half")
             var clan_title = document.createElement("span")
             clan_title.classList.add("header")
@@ -78,7 +80,7 @@ Module.register("MMM-ClashofClans-Player", {
             clan.appendChild(clan_details)
 
             stats_container.appendChild(ranking)
-            stats_container.appendChild(clan)
+            stats_container.appendChild(clan)*/
             wrapper.appendChild(stats_container)
         } else {
             var wrapper = document.createElement("div");
