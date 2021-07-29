@@ -5,7 +5,7 @@ This is a MagicMirror Module which shows you the Name, the actual Trophies and t
 ## Screenshot
 
 ![Screenshot of MMM-ClashofClans-Player]
-(screenshots/MMM-ClashofClans-Player.png)
+(/screenshots/MMM-ClashofClans-Player.png)
 
 ## Requirements
 
