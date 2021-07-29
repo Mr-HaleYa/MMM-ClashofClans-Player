@@ -9,7 +9,10 @@
 }
 
 .CoC_half {
-    boder: 1px red solid;
+    width: 38%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px red solid;
 }
 
 .header {
