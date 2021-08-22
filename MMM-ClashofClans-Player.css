@@ -1,25 +1,16 @@
 .CoC_container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-}
-
-.CoC_underline {
-    border-bottom: white solid 1px;
-}
-
-.CoC_half {
-    margin-left: 5%;
-    margin-right: 5%;
-    overflow: visible;
 }
 
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
 .CoC_image {
-    width: 40px;
+    height: 45px;
+    width: 45px;
 }
